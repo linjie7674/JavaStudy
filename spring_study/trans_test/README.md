@@ -8,7 +8,12 @@
         return dataSourceTransactionManager;
     }
     ```
-2. 配置[Transactional注解](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html)
+2. 开启事务管理功能
+    ```Java
+    @EnableTransactionManagement
+    public class SpringConfig {}
+    ```
+3. 配置[Transactional注解](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html)
     - propagation：配置事务的传播特性
     - isolation：管理事务的隔离级别
     ```java
